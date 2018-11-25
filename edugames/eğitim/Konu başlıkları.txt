@@ -1,0 +1,38 @@
+1-Letters  -- Harfler 				A'dan Z'ye kadar her harf için 3 resimli ve sesli örnek
+
+2-Numbers  -- Sayılar				0 ile 9 arasında sesli ve olabilirse örnekli
+
+3-Colors   -- Renkler				sarı,beyaz,kırmızı,mor,pembe,turuncu,yeşil,kahverengi,mavi,siyah
+
+4-Body	   -- Vücudumuz				saç,kafa,kulakear,gözeye,burun,ağız,kol,parmak,el,diz,leg,foot,tooth
+
+5-Foods & Drinks
+
+5.1-Foods  -- Yiyecekler  (eksik)   ekmek,köfte,kızartma,makarna,çikolata,pasta,yoghurt,salad,dondurma,peynir,yumurta,zeyt,bal,çorba
+
+5.2-Driks  -- İçecekler     		su,süt,çay,kahve,ayran,kola,soda,meyvesuyu,kola,limonata
+
+5.3-Fruits -- Meyveler      		elma,muz,portakala,limon,üzüm,şeftali,kavun,karpuz,çilek,armut,kayısı,kiraz
+
+5.4-Vega   -- Sebzeler		 		havuç,mısır,salata,biber,mantar,soğan,patates,domates,balkabağı	
+
+
+6-Animal   -- Hayvanlar				kedi,köpk,kuş,balk,tavşn,kaplmba,inek,tavk,eşek,ördek,fil,keçi,at,asln,yılan,maymn,zebra,kangru
+
+
+7-Jobs 	   -- Meslekler				çifçi,şarkıcı,doktor,vet,polis,asker,itfayeci,öğretmen,pilot,garson,avukat,hemşire,
+								    mühendis,ressam,denizci,aşçı,student
+
+
+8-Things   -- Eşyalar	  (eksik)	kapı,pencere,karatahta,harita,kitap,sıra,kalem,silgi,kağıt,sandalye,masa,defter,picture,
+									schoolbag,TV,halı,koltuk,yatak,araba,ağaç,çiçek,top,deniz,gemi,uçak,guitar,piano,kite
+
+9-Verbs	   -- Fiiller     (eksik)   yemek,içmek,uyumak,uyanmak,yürümek,koşmak,ağlamak,gülmek,zıplamak,ride,sing,dance,play,izlemek,
+									okumak,yazmak,ipatlamak(skip rope),study,
+
+10-Günlük kelimeler(DailyWords)
+10.1-Time  --  Zaman 				sabah,öğlen,akşam,gece,ilkbahar,yaz,sonbahar,kış,12 tane ay	  	
+10.2-Family--  Aile					anne,baba,abi,abla,kardeş,dayı,hala,amca,teyze,büyükanne,dede
+10.3-Wather--  Hava Durumu			sunny,rainiy,snowy,windy,cold,hot
+10.4-Feeling-- Hisler				sad,happy,suprised,good,bad,hungry,angry,tired
+10.5-Places -- Mekanlar				restaureant,school,market,hospital,park,museum,mall,zoo,mosque,cinema,library,bank
