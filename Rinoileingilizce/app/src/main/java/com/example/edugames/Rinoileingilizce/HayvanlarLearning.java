@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.example.edugames.Rinoileingilizce.R.raw.kangrooo;
@@ -31,7 +32,7 @@ public class HayvanlarLearning extends AppCompatActivity {
         final ImageView hayvanorta=findViewById(R.id.hayvanorta);
         ImageView hayvansag=findViewById(R.id.hayvansag);
         ImageView hayvansol=findViewById(R.id.hayvansol);
-        np=MediaPlayer.create(context,sounds[i]);
+
 
         Bitmap bee= BitmapFactory.decodeResource(getResources(),R.drawable.beee);
         Bitmap bird=BitmapFactory.decodeResource(getResources(),R.drawable.bird);
@@ -77,20 +78,29 @@ public class HayvanlarLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 i++;
                 if (i == 18){
                     i =0;
                 }
-
+                np=MediaPlayer.create(context,sounds[i]);
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
 
-                try {
-                    if (np.isPlaying()) {
-                        np.stop();
+
+
+                np.start();
+                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+
+
                         np.release();
-                        np = MediaPlayer.create(context,sounds[i]);
-                    } np.start();
-                } catch(Exception e) { e.printStackTrace(); }
+                    }
+                });
+
+
+
+
 
 
             }
@@ -101,37 +111,57 @@ public class HayvanlarLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
                 if(i==0){
                     i=18;
                 }
                 i--;
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
+                if(np.isPlaying()==true){
+                    np.stop();
 
-                try {
-                    if (np.isPlaying()) {
+                }
+                np=MediaPlayer.create(context,sounds[i]);
+                np.start();
+                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+
+
                         np.stop();
-                        np.release();
-                        np = MediaPlayer.create(context, sounds[i]);
-                    } np.start();
-                } catch(Exception e) { e.printStackTrace(); }
+                    }
+                });
+
+
+
 
             }
         });
 
         np=MediaPlayer.create(context,sounds[0]);
         np.start();
+        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
 
+
+                np.release();
+            }
+        });
     }
     public void sesver(View view){
-        try {
-            if (np.isPlaying()) {
-                np.stop();
+
+        np=MediaPlayer.create(context,sounds[i]);
+        np.start();
+        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+
                 np.release();
-                np = MediaPlayer.create(context, sounds[i]);
-            } np.start();
-        } catch(Exception e) { e.printStackTrace(); }
-
-
+            }
+        });
 
     }
 }

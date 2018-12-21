@@ -30,7 +30,8 @@
         <activity android:name=".DailyWordsActivity" />
         <activity android:name=".SayilarLearning" />
         <activity android:name=".RenklerLearning" />
-        <activity android:name=".HayvanlarLearning"></activity>
+        <activity android:name=".HayvanlarLearning" />
+        <activity android:name=".HomeActivity"></activity>
     </application>
 
 </manifest>

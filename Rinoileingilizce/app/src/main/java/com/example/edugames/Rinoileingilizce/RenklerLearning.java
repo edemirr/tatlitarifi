@@ -30,9 +30,9 @@ public class RenklerLearning extends AppCompatActivity {
 
 
         final ImageView renkorta=findViewById(R.id.renkorta) ;
-        ImageView renksag=findViewById(R.id.renksag);
+        final ImageView renksag=findViewById(R.id.renksag);
         ImageView renksol=findViewById(R.id.renksol);
-        np=MediaPlayer.create(context,sounds[i]);
+
 
         Bitmap red=BitmapFactory.decodeResource(getResources(),R.drawable.red);
         Bitmap orange=BitmapFactory.decodeResource(getResources(),R.drawable.orange);
@@ -64,20 +64,30 @@ public class RenklerLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                try {
+
+
+
                     i++;
                     if (i == 10){
                         i =0;
                     }
-
+                np=MediaPlayer.create(context,sounds[i]);
                     renkorta.setImageBitmap(renkler.get(i));
 
-                    if (np.isPlaying()) {
-                        np.stop();
-                        np.release();
-                        np = MediaPlayer.create(context,sounds[i]);
-                    } np.start();
-                } catch(Exception e) { e.printStackTrace(); }
+
+
+                        np.start();
+                        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mp) {
+
+
+                                np.release();
+                            }
+                        });
+
+
+
 
             }
         });
@@ -86,20 +96,25 @@ public class RenklerLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                try {
+
 
                     if(i==0){
                         i=10;
                     }
                     i--;
+                    np=MediaPlayer.create(context,sounds[i]);
                     renkorta.setImageBitmap(renkler.get(i));
 
-                    if (np.isPlaying()) {
-                        np.stop();
+
+                np.start();
+                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+
+
                         np.release();
-                        np = MediaPlayer.create(context,sounds[i]);
-                    } np.start();
-                } catch(Exception e) { e.printStackTrace(); }
+                    }
+                });
 
 
             }
@@ -107,19 +122,31 @@ public class RenklerLearning extends AppCompatActivity {
 
         np=MediaPlayer.create(context,sounds[0]);
         np.start();
+        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
 
 
-    }
-    public void sesver(View view){
-        try {
-            if (np.isPlaying()) {
-                np.stop();
                 np.release();
-                np = MediaPlayer.create(context,sounds[i]);
-            } np.start();
-        }
-        catch(Exception e) { e.printStackTrace(); }
+            }
+        });
 
 
     }
+    public void sesver(View view) {
+
+
+        np=MediaPlayer.create(context,sounds[i]);
+        np.start();
+        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+
+                np.release();
+            }
+        });
+
+    }
+
 }
