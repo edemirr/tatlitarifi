@@ -8,7 +8,7 @@
     android:background="@drawable/animalsarka">
 
     <ImageView
-        android:id="@+id/test5"
+        android:id="@+id/hayvanlartest"
         android:layout_width="210dp"
         android:layout_height="210dp"
         android:layout_marginStart="97dp"
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/learn5"
+        android:id="@+id/hayvanlarlearn"
         android:layout_width="210dp"
         android:layout_height="210dp"
         android:layout_marginStart="97dp"
@@ -31,7 +31,7 @@
         android:layout_marginTop="160dp"
         android:layout_marginEnd="96dp"
         android:layout_marginRight="96dp"
-        android:onClick="harflerlearn"
+        android:onClick="hayvanlearn"
         android:src="@drawable/learn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.375"

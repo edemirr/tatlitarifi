@@ -27,7 +27,10 @@
         <activity android:name=".MesleklerActivity" />
         <activity android:name=".VucutActivity" />
         <activity android:name=".ThingsActivity" />
-        <activity android:name=".DailyWordsActivity"></activity>
+        <activity android:name=".DailyWordsActivity" />
+        <activity android:name=".SayilarLearning" />
+        <activity android:name=".RenklerLearning" />
+        <activity android:name=".HayvanlarLearning"></activity>
     </application>
 
 </manifest>
