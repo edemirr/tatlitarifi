@@ -31,7 +31,11 @@
         <activity android:name=".SayilarLearning" />
         <activity android:name=".RenklerLearning" />
         <activity android:name=".HayvanlarLearning" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".food_food" />
+        <activity android:name=".food_fruit" />
+        <activity android:name=".food_drink" />
+        <activity android:name=".food_vegetable"></activity>
     </application>
 
 </manifest>
