@@ -16,10 +16,17 @@ public class HarflerLearningActivity extends AppCompatActivity {
 
 
       int i = 0;
-    Context context=this;
+   /* Context context=this;
     MediaPlayer np;
-   final int[] sounds = new int [] {/*R.raw.a,R.raw.b,R.raw.c,R.raw.d,R.raw.e,R.raw.f,R.raw.g,R.raw.h,R.raw.i,R.raw.j,R.raw.k,R.raw.l,R.raw.m,R.raw.n,R.raw.o,R.raw.p,R.raw.q,*/
-            R.raw.r,R.raw.s,R.raw.t,R.raw.u,R.raw.v,R.raw.w,R.raw.x,R.raw.y,R.raw.z};
+   final int[] sounds = new int [] {*//*R.raw.a,R.raw.b,R.raw.c,R.raw.d,R.raw.e,R.raw.f,R.raw.g,R.raw.h,R.raw.i,R.raw.j,R.raw.k,R.raw.l,R.raw.m,R.raw.n,R.raw.o,R.raw.p,R.raw.q,*//*
+            R.raw.r,R.raw.s,R.raw.t,R.raw.u,R.raw.v,R.raw.w,R.raw.x,R.raw.y,R.raw.z};*/
+
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +39,7 @@ public class HarflerLearningActivity extends AppCompatActivity {
         final ImageView image4 = findViewById(R.id.harfholder);
         ImageView prevok = findViewById(R.id.solaok);
         final ImageView nextok = findViewById(R.id.sagaok);
-
-
-
-
+       /* np=MediaPlayer.create(context,sounds[i]);*/
 
         Bitmap aa =BitmapFactory.decodeResource(getResources(),R.drawable.a);
         Bitmap bb =BitmapFactory.decodeResource(getResources(),R.drawable.bb);
@@ -63,10 +67,6 @@ public class HarflerLearningActivity extends AppCompatActivity {
         Bitmap xx =BitmapFactory.decodeResource(getResources(),R.drawable.xx);
         Bitmap yy =BitmapFactory.decodeResource(getResources(),R.drawable.yy);
         Bitmap zz =BitmapFactory.decodeResource(getResources(),R.drawable.zz);
-
-
-
-
 
         Bitmap astronot=BitmapFactory.decodeResource(getResources(),R.drawable.astronot);
         Bitmap airplane=BitmapFactory.decodeResource(getResources(),R.drawable.airplane);
@@ -147,13 +147,10 @@ public class HarflerLearningActivity extends AppCompatActivity {
         Bitmap zipper = BitmapFactory.decodeResource(getResources(),R.drawable.zipper);
         Bitmap zoo = BitmapFactory.decodeResource(getResources(),R.drawable.zoo);
 
-
         final ArrayList<Bitmap> pics1 = new ArrayList<>();
         final ArrayList<Bitmap> pics2 = new ArrayList<>();
         final ArrayList<Bitmap> pics3 = new ArrayList<>();
         final ArrayList<Bitmap> picsorta = new ArrayList<>();
-
-
 
 
         pics1.add(astronot);
@@ -266,6 +263,9 @@ public class HarflerLearningActivity extends AppCompatActivity {
 
 
 
+
+
+
         nextok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -335,18 +335,24 @@ public class HarflerLearningActivity extends AppCompatActivity {
 
                 np.release();
             }
-        });*/
-
+        });
+*/
     }
 
-   public void sesver(View view) {
+   /*public void sesver(View view) {
 
 
         np = MediaPlayer.create(context, sounds[i]);
         np.start();
+        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
 
 
-    }
+                np.release();
+            }
+        });
+    }*/
 }
 
 
