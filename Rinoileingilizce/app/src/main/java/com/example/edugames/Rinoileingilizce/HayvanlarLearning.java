@@ -117,19 +117,16 @@ public class HayvanlarLearning extends AppCompatActivity {
                     i=18;
                 }
                 i--;
-                hayvanorta.setImageBitmap(hayvanlar.get(i));
-                if(np.isPlaying()==true){
-                    np.stop();
 
-                }
                 np=MediaPlayer.create(context,sounds[i]);
+                hayvanorta.setImageBitmap(hayvanlar.get(i));
                 np.start();
                 np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
 
 
-                        np.stop();
+                        np.release();
                     }
                 });
 

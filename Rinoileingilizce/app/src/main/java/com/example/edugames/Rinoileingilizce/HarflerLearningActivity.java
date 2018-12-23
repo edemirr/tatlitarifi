@@ -1,7 +1,9 @@
 package com.example.edugames.Rinoileingilizce;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.SoundEffectConstants;
@@ -14,6 +16,10 @@ public class HarflerLearningActivity extends AppCompatActivity {
 
 
       int i = 0;
+    Context context=this;
+    MediaPlayer np;
+   final int[] sounds = new int [] {/*R.raw.a,R.raw.b,R.raw.c,R.raw.d,R.raw.e,R.raw.f,R.raw.g,R.raw.h,R.raw.i,R.raw.j,R.raw.k,R.raw.l,R.raw.m,R.raw.n,R.raw.o,R.raw.p,R.raw.q,*/
+            R.raw.r,R.raw.s,R.raw.t,R.raw.u,R.raw.v,R.raw.w,R.raw.x,R.raw.y,R.raw.z};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,9 @@ public class HarflerLearningActivity extends AppCompatActivity {
         final ImageView image4 = findViewById(R.id.harfholder);
         ImageView prevok = findViewById(R.id.solaok);
         final ImageView nextok = findViewById(R.id.sagaok);
+
+
+
 
 
         Bitmap aa =BitmapFactory.decodeResource(getResources(),R.drawable.a);
@@ -270,6 +279,17 @@ public class HarflerLearningActivity extends AppCompatActivity {
                 image3.setImageBitmap(pics3.get(i));
                 image4.setImageBitmap(picsorta.get(i));
 
+              /*  np=MediaPlayer.create(context,sounds[i]);
+                np.start();
+                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+
+
+                        np.release();
+                    }
+                });
+*/
 
 
             }
@@ -286,14 +306,45 @@ public class HarflerLearningActivity extends AppCompatActivity {
                    i=26;
                }
                 i--;
+
                 image1.setImageBitmap(pics1.get(i));
                 image2.setImageBitmap(pics2.get(i));
                 image3.setImageBitmap(pics3.get(i));
                 image4.setImageBitmap(picsorta.get(i));
 
+              /*  np.start();
+                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+
+
+                        np.release();
+                    }
+                });*/
+
 
             }
+
         });
+       /* np=MediaPlayer.create(context,sounds[0]);
+        np.start();
+        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+
+                np.release();
+            }
+        });*/
+
+    }
+
+   public void sesver(View view) {
+
+
+        np = MediaPlayer.create(context, sounds[i]);
+        np.start();
+
 
     }
 }
