@@ -3,7 +3,9 @@ package com.example.edugames.Rinoileingilizce;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,22 +19,40 @@ import static com.example.edugames.Rinoileingilizce.R.raw.kangrooo;
 public class HayvanlarLearning extends AppCompatActivity {
 
     Context context=this;
-    MediaPlayer np;
+    public static SoundPool sp;
     int i = 0;
-    final int[] sounds = new int [] {
-            R.raw.birdd,R.raw.beee,R.raw.catt, R.raw.chickenn, R.raw.coww,R.raw.dogg,R.raw.donkeyy,R.raw.duckk,R.raw.elephantt,
-            R.raw.fishh,R.raw.goatt,R.raw.horsee,R.raw.kangrooo,R.raw.lionn,R.raw.monkeyy,R.raw.rabbitt,R.raw.turtlee,R.raw.zebraa
-    };
+    public static int[] sounds ;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hayvanlar_learning);
-
         final ImageView hayvanorta=findViewById(R.id.hayvanorta);
         ImageView hayvansag=findViewById(R.id.hayvansag);
         ImageView hayvansol=findViewById(R.id.hayvansol);
 
+        sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
+        sounds = new int[18];
+        sounds[0] = sp.load(context,R.raw.birdd,1);
+        sounds[1] = sp.load(context,R.raw.beee,1);
+        sounds[2] = sp.load(context,R.raw.catt,1);
+        sounds[3] = sp.load(context,R.raw.chickenn,1);
+        sounds[4] = sp.load(context,R.raw.coww,1);
+        sounds[5] = sp.load(context,R.raw.dogg,1);
+        sounds[6] = sp.load(context,R.raw.donkeyy,1);
+        sounds[7] = sp.load(context,R.raw.duckk,1);
+        sounds[8] = sp.load(context,R.raw.elephantt,1);
+        sounds[9] = sp.load(context,R.raw.fishh,1);
+        sounds[10] = sp.load(context,R.raw.goatt,1);
+        sounds[11] = sp.load(context,R.raw.horsee,1);
+        sounds[12] = sp.load(context,R.raw.kangrooo,1);
+        sounds[13] = sp.load(context,R.raw.lionn,1);
+        sounds[14] = sp.load(context,R.raw.monkeyy,1);
+        sounds[15] = sp.load(context,R.raw.rabbitt,1);
+        sounds[16] = sp.load(context,R.raw.turtlee,1);
+        sounds[17] = sp.load(context,R.raw.zebraa,1);
 
         Bitmap bee= BitmapFactory.decodeResource(getResources(),R.drawable.beee);
         Bitmap bird=BitmapFactory.decodeResource(getResources(),R.drawable.bird);
@@ -74,35 +94,18 @@ public class HayvanlarLearning extends AppCompatActivity {
         hayvanlar.add(turtle);
         hayvanlar.add(zebra);
 
+        sp.play(sounds[0],100,100,1,0,1);
+
         hayvansag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 i++;
                 if (i == 18){
                     i =0;
                 }
-                np=MediaPlayer.create(context,sounds[i]);
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
-
-
-
-                np.start();
-                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-
-
-                        np.release();
-                    }
-                });
-
-
-
-
-
-
+                sp.play(sounds[i],100,100,1,0,1);
             }
         });
 
@@ -111,54 +114,25 @@ public class HayvanlarLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 if(i==0){
                     i=18;
                 }
                 i--;
 
-                np=MediaPlayer.create(context,sounds[i]);
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
-                np.start();
-                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-
-
-                        np.release();
-                    }
-                });
-
-
-
-
-            }
+                sp.play(sounds[i],100,100,1,0,1);
+             }
         });
 
-        np=MediaPlayer.create(context,sounds[0]);
-        np.start();
-        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-
-
-                np.release();
-            }
-        });
     }
+
     public void sesver(View view){
-
-        np=MediaPlayer.create(context,sounds[i]);
-        np.start();
-        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-
-
-                np.release();
-            }
-        });
-
+        sp.play(sounds[i],100,100,1,0,1);
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        sp.release();
+        sp=null;
     }
 }

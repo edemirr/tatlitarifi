@@ -1,7 +1,6 @@
 package com.example.edugames.Rinoileingilizce;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +35,7 @@ public class FoodDrinkActivity extends AppCompatActivity {
     }
     public void intentfruit(View view){
 
-        Intent ıntent = new Intent(this,food_fruit.class);
+        Intent ıntent = new Intent(this,food_food.class);
         startActivity(ıntent);
 
     }

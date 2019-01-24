@@ -3,7 +3,9 @@ package com.example.edugames.Rinoileingilizce;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,17 +18,37 @@ import java.util.ArrayList;
 public class RenklerLearning extends AppCompatActivity {
 
     Context context=this;
-    MediaPlayer np;
+
+    public static SoundPool sp;
     int i = 0;
-    final int[] sounds = new int [] {
-            R.raw.black,R.raw.brown,R.raw.red,R.raw.orange,R.raw.yellow,R.raw.green,R.raw.blue,R.raw.purple,R.raw.pink,R.raw.white
-    };
+    public static int[] sounds;
+
+        @Override
+    protected void onPause(){
+        super.onPause();
+        sp.release();
+        sp=null;
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_renkler_learning);
+
+        sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
+        sounds = new int[10];
+        sounds[0] = sp.load(context,R.raw.black,1);
+        sounds[1] = sp.load(context,R.raw.brown,1);
+        sounds[2] = sp.load(context,R.raw.red,1);
+        sounds[3] = sp.load(context,R.raw.orange,1);
+        sounds[4] = sp.load(context,R.raw.yellow,1);
+        sounds[5] = sp.load(context,R.raw.green,1);
+        sounds[6] = sp.load(context,R.raw.blue,1);
+        sounds[7] = sp.load(context,R.raw.purple,1);
+        sounds[8] = sp.load(context,R.raw.pink,1);
+        sounds[9] = sp.load(context,R.raw.white,1);
+
 
 
         final ImageView renkorta=findViewById(R.id.renkorta) ;
@@ -64,29 +86,14 @@ public class RenklerLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
-
-                    i++;
+                     i++;
                     if (i == 10){
                         i =0;
                     }
-                np=MediaPlayer.create(context,sounds[i]);
+
+
                     renkorta.setImageBitmap(renkler.get(i));
-
-
-
-                        np.start();
-                        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                            @Override
-                            public void onCompletion(MediaPlayer mp) {
-
-
-                                np.release();
-                            }
-                        });
-
-
+                    sp.play(sounds[i],100,100,1,0,1);
 
 
             }
@@ -102,50 +109,26 @@ public class RenklerLearning extends AppCompatActivity {
                         i=10;
                     }
                     i--;
-                    np=MediaPlayer.create(context,sounds[i]);
+
                     renkorta.setImageBitmap(renkler.get(i));
 
-
-                np.start();
-                np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-
-
-                        np.release();
-                    }
-                });
+                sp.play(sounds[i],100,100,1,0,1);
 
 
             }
         });
 
-        np=MediaPlayer.create(context,sounds[0]);
-        np.start();
-        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
+        sp.play(sounds[0],100,100,1,0,1);
 
-
-                np.release();
-            }
-        });
 
 
     }
+
+
     public void sesver(View view) {
 
 
-        np=MediaPlayer.create(context,sounds[i]);
-        np.start();
-        np.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-
-
-                np.release();
-            }
-        });
+        sp.play(sounds[i],100,100,1,0,1);
 
     }
 
