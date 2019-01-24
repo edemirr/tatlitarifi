@@ -20,9 +20,9 @@ public class food_drink extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_drink);
 
-        final ImageView orta=findViewById(R.id.fooddrinkorta) ;
-        final ImageView sag=findViewById(R.id.fooddrinksag);
-        ImageView sol=findViewById(R.id.fooddrinksol);
+        final ImageView orta=findViewById(R.id.fodrorta) ;
+        final ImageView sag=findViewById(R.id.fodrsag);
+        ImageView sol=findViewById(R.id.fodrsol);
 
         Bitmap coffee=BitmapFactory.decodeResource(getResources(),R.drawable.ffcoffee);
         Bitmap coke=BitmapFactory.decodeResource(getResources(),R.drawable.ffcoke);

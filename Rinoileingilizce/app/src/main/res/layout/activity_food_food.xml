@@ -7,35 +7,20 @@
     tools:context=".food_drink"
     android:background="@drawable/fruitsarka">
 
-    <ImageView
-        android:id="@+id/fooddrinkorta"
-        android:layout_width="365dp"
-        android:layout_height="332dp"
-        android:layout_marginTop="183dp"
-        android:layout_marginBottom="164dp"
-        app:layout_constraintBottom_toTopOf="@+id/foodfruitsol"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ffbread" />
 
     <ImageView
-        android:id="@+id/fooddrinksol"
+        android:id="@+id/fofosol"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginEnd="259dp"
-        android:layout_marginRight="259dp"
         android:layout_marginBottom="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/foodfruitsag"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/solaok" />
 
     <ImageView
-        android:id="@+id/fooddrinksag"
+        android:id="@+id/fofosag"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="16dp"
@@ -44,4 +29,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/sagaok" />
+
+    <ImageView
+        android:id="@+id/fofoorta"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="147dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ffbread" />
 </android.support.constraint.ConstraintLayout>

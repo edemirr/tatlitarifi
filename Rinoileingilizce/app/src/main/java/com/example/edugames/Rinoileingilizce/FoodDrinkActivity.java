@@ -35,7 +35,7 @@ public class FoodDrinkActivity extends AppCompatActivity {
     }
     public void intentfruit(View view){
 
-        Intent ıntent = new Intent(this,food_food.class);
+        Intent ıntent = new Intent(this,food_fruit.class);
         startActivity(ıntent);
 
     }

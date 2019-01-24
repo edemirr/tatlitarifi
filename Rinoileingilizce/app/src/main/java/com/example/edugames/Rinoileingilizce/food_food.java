@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class food_food extends AppCompatActivity {
 
     Context context=this;
-    MediaPlayer np;
+
     int i = 0;
 
     @Override
@@ -22,9 +22,9 @@ public class food_food extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_food);
 
-        final ImageView orta=findViewById(R.id.foodfruitorta) ;
-        final ImageView sag=findViewById(R.id.foodfruitsag);
-        ImageView sol=findViewById(R.id.foodfruitsol);
+        final ImageView orta=findViewById(R.id.fofoorta) ;
+        final ImageView sag=findViewById(R.id.fofosag);
+        ImageView sol=findViewById(R.id.fofosol);
 
         Bitmap bread=BitmapFactory.decodeResource(getResources(),R.drawable.ffbread);
         Bitmap cake=BitmapFactory.decodeResource(getResources(),R.drawable.ffcake);
