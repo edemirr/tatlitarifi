@@ -34,7 +34,8 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".food_food" />
         <activity android:name=".food_drink" />
-        <activity android:name=".food_vegetable"></activity>
+        <activity android:name=".food_vegetable" />
+        <activity android:name=".food_fruit"></activity>
     </application>
 
 </manifest>

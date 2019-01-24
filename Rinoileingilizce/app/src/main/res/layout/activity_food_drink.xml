@@ -4,24 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".food_drink"
+    tools:context=".food_food"
     android:background="@drawable/fruitsarka">
 
     <ImageView
-        android:id="@+id/fooddrinkorta"
-        android:layout_width="365dp"
-        android:layout_height="332dp"
-        android:layout_marginTop="183dp"
-        android:layout_marginBottom="164dp"
-        app:layout_constraintBottom_toTopOf="@+id/foodfruitsol"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ffbread" />
-
-    <ImageView
-        android:id="@+id/fooddrinksol"
+        android:id="@+id/foodfruitsol"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
@@ -35,7 +22,7 @@
         app:srcCompat="@drawable/solaok" />
 
     <ImageView
-        android:id="@+id/fooddrinksag"
+        android:id="@+id/fooddrinksagsag"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="16dp"
@@ -44,4 +31,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/sagaok" />
+
+    <ImageView
+        android:id="@+id/fooddrinkorta"
+        android:layout_width="365dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toTopOf="@+id/foodfruitsol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ffcoffee" />
 </android.support.constraint.ConstraintLayout>

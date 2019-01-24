@@ -43,5 +43,5 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ffbread" />
+        tools:srcCompat="@drawable/splash" />
 </android.support.constraint.ConstraintLayout>

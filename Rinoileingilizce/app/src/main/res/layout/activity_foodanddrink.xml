@@ -5,61 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fruitsarka"
-    tools:context=".FoodDrinkActivity"
+    tools:context=".food_drink"
     tools:layout_editor_absoluteY="25dp">
 
     <ImageView
-        android:id="@+id/fooddrinkorta"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="166dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fooddrinkvegetable"
-        app:srcCompat="@drawable/fooddrink" />
-
-    <ImageView
-        android:id="@+id/fooddrinkfood"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="136dp"
-        android:onClick="intentfood"
+        android:id="@+id/fdvg"
+        android:layout_width="171dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginBottom="41dp"
+        android:onClick="intentvege"
+        app:layout_constraintBottom_toTopOf="@+id/fdfr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/foods" />
+        app:srcCompat="@drawable/vegetables" />
 
     <ImageView
-        android:id="@+id/fooddrinkfruit"
-        android:layout_width="161dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="10dp"
-        android:onClick="intentfruit"
-        app:layout_constraintStart_toStartOf="@+id/fooddrinkfood"
-        app:layout_constraintTop_toBottomOf="@+id/fooddrinkorta"
-        app:srcCompat="@drawable/fruits" />
-
-    <ImageView
-        android:id="@+id/fooddrinkdrink"
-        android:layout_width="157dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="10dp"
+        android:id="@+id/fddr"
+        android:layout_width="167dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:onClick="intentdrink"
-        app:layout_constraintEnd_toEndOf="@+id/fooddrinkvegetable"
-        app:layout_constraintTop_toBottomOf="@+id/fooddrinkorta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fdvg"
         app:srcCompat="@drawable/drinks" />
 
     <ImageView
-        android:id="@+id/fooddrinkvegetable"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="intentvege"
+        android:id="@+id/fdfr"
+        android:layout_width="179dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="157dp"
+        android:onClick="intentfruit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fdvg"
+        app:srcCompat="@drawable/fruits" />
+
+    <ImageView
+        android:id="@+id/fdfo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="46dp"
+        android:onClick="intentfood"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vegetables" />
+        app:layout_constraintTop_toBottomOf="@+id/fdvg"
+        app:layout_constraintVertical_bias="0.46"
+        app:srcCompat="@drawable/foods" />
 </android.support.constraint.ConstraintLayout>

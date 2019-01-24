@@ -14,10 +14,10 @@ import java.util.ArrayList;
 
 public class SayilarLearning extends AppCompatActivity {
 
-    Context context=this;
-    public static SoundPool sp1;
+   /* Context context=this;
+    public static SoundPool sp1;*/
     int i = 0;
-    public static int[] sounds ;
+   /* public static int[] sounds ;*/
 
 
 
@@ -29,7 +29,7 @@ public class SayilarLearning extends AppCompatActivity {
         ImageView sagaokk = findViewById(R.id.sagaok);
         ImageView solaokk = findViewById(R.id.solaok);
 
-        sp1=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
+        /*sp1=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
         sounds = new int[11];
 
         sounds[0] = sp1.load(context,R.raw.one,1);
@@ -42,7 +42,7 @@ public class SayilarLearning extends AppCompatActivity {
         sounds[7] = sp1.load(context,R.raw.eight,1);
         sounds[8] = sp1.load(context,R.raw.nine,1);
         sounds[9] = sp1.load(context,R.raw.ten,1);
-        sounds[10] = sp1.load(context,R.raw.zero,1);
+        sounds[10] = sp1.load(context,R.raw.zero,1);*/
 
 
         Bitmap one = BitmapFactory.decodeResource(getResources(),R.drawable.one);
@@ -71,8 +71,8 @@ public class SayilarLearning extends AppCompatActivity {
         sayilarpics.add(ten);
         sayilarpics.add(zero);
 
-       sp1.play(sounds[0],100,100,1,0,1);
-
+      /* sp1.play(sounds[0],100,100,1,0,1);
+*/
         sagaokk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +82,7 @@ public class SayilarLearning extends AppCompatActivity {
                     i =0;
                 }
                 ortaresim.setImageBitmap(sayilarpics.get(i));
-                sp1.play(sounds[i],100,100,1,0,1);
+               /* sp1.play(sounds[i],100,100,1,0,1);*/
             }
         });
 
@@ -94,12 +94,12 @@ public class SayilarLearning extends AppCompatActivity {
                 }
                 i--;
                 ortaresim.setImageBitmap(sayilarpics.get(i));
-               sp1.play(sounds[i],100,100,1,0,1);
+               /*sp1.play(sounds[i],100,100,1,0,1);*/
             }
         });
 
     }public void sesver(View view){
-        sp1.play(sounds[i],100,100,1,0,1);
+        /*sp1.play(sounds[i],100,100,1,0,1);*/
     }
    /* @Override
     protected void onPause(){

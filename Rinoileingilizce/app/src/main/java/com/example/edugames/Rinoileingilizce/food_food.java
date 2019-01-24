@@ -20,7 +20,7 @@ public class food_food extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_fruit);
+        setContentView(R.layout.activity_food_food);
 
         final ImageView orta=findViewById(R.id.foodfruitorta) ;
         final ImageView sag=findViewById(R.id.foodfruitsag);

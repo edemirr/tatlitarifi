@@ -4,7 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".food_food"
+    tools:context=".food_drink"
     android:background="@drawable/fruitsarka">
 
+    <ImageView
+        android:id="@+id/fooddrinkorta"
+        android:layout_width="365dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toTopOf="@+id/foodfruitsol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ffbread" />
+
+    <ImageView
+        android:id="@+id/fooddrinksol"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginRight="259dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/foodfruitsag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/solaok" />
+
+    <ImageView
+        android:id="@+id/fooddrinksag"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/sagaok" />
 </android.support.constraint.ConstraintLayout>

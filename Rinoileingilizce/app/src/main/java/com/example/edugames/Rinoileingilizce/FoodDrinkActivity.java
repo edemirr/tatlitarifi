@@ -13,11 +13,11 @@ public class FoodDrinkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foodanddrink);
 
-        ImageView foods = findViewById(R.id.fooddrinkfood);
-        ImageView drinks = findViewById(R.id.fooddrinkdrink);
-        ImageView vege = findViewById(R.id.fooddrinkvegetable);
-        ImageView fruit =  findViewById(R.id.fooddrinkfruit);
-        ImageView orta = findViewById(R.id.fooddrinkorta);
+        ImageView foods = findViewById(R.id.fdfo);
+        ImageView drinks = findViewById(R.id.fddr);
+        ImageView vege = findViewById(R.id.fdvg);
+        ImageView fruit =  findViewById(R.id.fdfr);
+
 
 
     }
