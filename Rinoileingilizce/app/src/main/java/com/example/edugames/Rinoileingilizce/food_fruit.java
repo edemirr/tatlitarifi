@@ -15,7 +15,6 @@ public class food_fruit extends AppCompatActivity {
     Context context=this;
 
     int i = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,18 +22,18 @@ public class food_fruit extends AppCompatActivity {
 
         final ImageView orta=findViewById(R.id.fofrorta) ;
         final ImageView sag=findViewById(R.id.fofrsag);
-        final ImageView sol=findViewById(R.id.fofrsol);
+        ImageView sol=findViewById(R.id.fofrsol);
 
-        Bitmap apple=BitmapFactory.decodeResource(getResources(),R.drawable.apple);
+        Bitmap apple=BitmapFactory.decodeResource(getResources(),R.drawable.aapppll);
         Bitmap apricot=BitmapFactory.decodeResource(getResources(),R.drawable.apricot);
         Bitmap banana=BitmapFactory.decodeResource(getResources(),R.drawable.banana);
         Bitmap cherry=BitmapFactory.decodeResource(getResources(),R.drawable.cherry);
         Bitmap grape=BitmapFactory.decodeResource(getResources(),R.drawable.grape);
-        Bitmap orange=BitmapFactory.decodeResource(getResources(),R.drawable.orange);
+        Bitmap orange=BitmapFactory.decodeResource(getResources(),R.drawable.oorraann);
         Bitmap peach=BitmapFactory.decodeResource(getResources(),R.drawable.peach);
         Bitmap pear=BitmapFactory.decodeResource(getResources(),R.drawable.pear);
         Bitmap strawberry=BitmapFactory.decodeResource(getResources(),R.drawable.strawberry);
-        Bitmap watermelon=BitmapFactory.decodeResource(getResources(),R.drawable.watermelon);
+        Bitmap watermelon=BitmapFactory.decodeResource(getResources(),R.drawable.wwaattrr);
 
         final ArrayList<Bitmap> fruits = new ArrayList<>();
 
@@ -49,6 +48,8 @@ public class food_fruit extends AppCompatActivity {
         fruits.add(pear);
         fruits.add(strawberry);
         fruits.add(watermelon);
+
+        orta.setImageBitmap(apple);
 
         sag.setOnClickListener(new View.OnClickListener() {
             @Override
