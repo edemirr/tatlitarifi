@@ -23,15 +23,10 @@
         <activity android:name=".FoodDrinkActivity" />
         <activity android:name=".RenklerActivity" />
         <activity android:name=".HayvanlarActivity" />
-        <activity android:name=".VerbsActivity" />
-        <activity android:name=".MesleklerActivity" />
         <activity android:name=".VucutActivity" />
-        <activity android:name=".ThingsActivity" />
-        <activity android:name=".DailyWordsActivity" />
         <activity android:name=".SayilarLearning" />
         <activity android:name=".RenklerLearning" />
         <activity android:name=".HayvanlarLearning" />
-        <activity android:name=".HomeActivity" />
         <activity android:name=".food_food" />
         <activity android:name=".food_drink" />
         <activity android:name=".food_vegetable" />

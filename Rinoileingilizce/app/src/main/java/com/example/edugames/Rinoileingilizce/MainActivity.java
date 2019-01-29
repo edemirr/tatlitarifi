@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    ImageView letters,numbers,fruits,colors,animals,vehicles,jobs,days,body,objects;
+    ImageView letters,numbers,fruits,colors,animals,body;
 
 
     @Override
@@ -27,11 +27,8 @@ public class MainActivity extends AppCompatActivity {
         fruits=findViewById(R.id.FoodDrinkMain);
         colors=findViewById(R.id.colorsMain);
         animals=findViewById(R.id.animalsMain);
-        vehicles=findViewById(R.id.VerbsMain);
-        jobs=findViewById(R.id.jobsMain);
-        days=findViewById(R.id.DailyWordsMain);
         body=findViewById(R.id.bodyMain);
-        objects=findViewById(R.id.DailyWordsMain);
+
     }
 
     public void harfleregit ( View view){
@@ -59,29 +56,11 @@ public class MainActivity extends AppCompatActivity {
         Intent ıntent = new Intent(this,HayvanlarActivity.class);
         startActivity(ıntent);
     }
-    public void araclaragit ( View view){
 
-        Intent ıntent = new Intent(this,VerbsActivity.class);
-        startActivity(ıntent);
-    }
-    public void meslekleregit ( View view){
-
-        Intent ıntent = new Intent(this,MesleklerActivity.class);
-        startActivity(ıntent);
-    }
     public void vucudagit ( View view){
 
         Intent ıntent = new Intent(this,VucutActivity.class);
         startActivity(ıntent);
     }
-    public void gunleregit ( View view){
 
-        Intent ıntent = new Intent(this,ThingsActivity.class);
-        startActivity(ıntent);
-    }
-    public void esyalaragit ( View view){
-
-        Intent ıntent = new Intent(this,DailyWordsActivity.class);
-        startActivity(ıntent);
-    }
 }
