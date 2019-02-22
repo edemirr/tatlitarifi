@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class SayilarLearning extends AppCompatActivity {
 
 
 
-
+    private String[] adlar = {"one", "two","three", "four","five", "six", "seven","eight", "nine","zer0" };
 
 
     @Override
@@ -29,6 +30,7 @@ public class SayilarLearning extends AppCompatActivity {
         final ImageView ortaresim=findViewById(R.id.ortaresim);
         final ImageView sagaokk = findViewById(R.id.sagaok);
         final ImageView solaokk = findViewById(R.id.solaok);
+        final TextView ad3=findViewById(R.id.ad3);
 
 
 
@@ -43,7 +45,6 @@ public class SayilarLearning extends AppCompatActivity {
         Bitmap seven = BitmapFactory.decodeResource(getResources(),R.drawable.seven);
         Bitmap eight = BitmapFactory.decodeResource(getResources(),R.drawable.eight);
         Bitmap nine = BitmapFactory.decodeResource(getResources(),R.drawable.nine);
-        Bitmap ten = BitmapFactory.decodeResource(getResources(),R.drawable.ten);
         Bitmap zero = BitmapFactory.decodeResource(getResources(),R.drawable.zero);
 
         final ArrayList<Bitmap> sayilarpics = new ArrayList<>();
@@ -57,7 +58,6 @@ public class SayilarLearning extends AppCompatActivity {
         sayilarpics.add(seven);
         sayilarpics.add(eight);
         sayilarpics.add(nine);
-        sayilarpics.add(ten);
         sayilarpics.add(zero);
 
 
@@ -66,11 +66,12 @@ public class SayilarLearning extends AppCompatActivity {
             public void onClick(View v) {
 
                 i++;
-                if (i == 11){
+                if (i == 10){
                     i =0;
                 }
 
                 ortaresim.setImageBitmap(sayilarpics.get(i));
+                ad3.setText(adlar[i]);
 
 
             }
@@ -80,7 +81,7 @@ public class SayilarLearning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(i==0){
-                    i=11;
+                    i=10;
                 }
                 i--;
                 ortaresim.setImageBitmap(sayilarpics.get(i));

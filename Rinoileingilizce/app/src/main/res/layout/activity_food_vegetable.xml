@@ -7,6 +7,20 @@
     tools:context=".food_vegetable"
     android:background="@drawable/fruitsarka">
 
+    <TextView
+        android:id="@+id/ad4"
+        android:layout_width="374dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="96dp"
+        android:gravity="center_vertical|center"
+        android:text="carrot"
+        android:textColor="@android:color/background_dark"
+        android:textSize="65sp"
+        app:fontFamily="@font/coming_soon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/fovesol"
         android:layout_width="60dp"
@@ -31,15 +45,15 @@
 
     <ImageView
         android:id="@+id/foveorta"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="346dp"
+        android:layout_height="313dp"
         android:layout_marginStart="6dp"
         android:layout_marginLeft="6dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
-        android:layout_marginBottom="147dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ffbread" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/carrot" />
 </android.support.constraint.ConstraintLayout>

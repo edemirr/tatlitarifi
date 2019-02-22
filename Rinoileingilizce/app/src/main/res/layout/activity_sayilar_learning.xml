@@ -7,18 +7,32 @@
     tools:context=".SayilarLearning"
     android:background="@drawable/numbersarka">
 
-    <ImageView
-        android:id="@+id/ortaresim"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginBottom="147dp"
+    <TextView
+        android:id="@+id/ad3"
+        android:layout_width="374dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="96dp"
+        android:gravity="center_vertical|center"
+        android:text="one"
+        android:textColor="@android:color/background_dark"
+        android:textSize="65sp"
+        app:fontFamily="@font/coming_soon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ortaresim"
+        android:layout_width="295dp"
+        android:layout_height="267dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/one" />
 
     <ImageView

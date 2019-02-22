@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,30 +17,33 @@ public class food_food extends AppCompatActivity {
     Context context=this;
 
     int i = 0;
+    private String[] adlar = {"bread", "cake","cheese", "chocolate",
+            "egg","fries", "honey","icecream", "meatball","olive","pasta","salad","soup","yoghurt"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_food);
 
-        final ImageView orta=findViewById(R.id.fofoorta) ;
+        final ImageView orta=findViewById(R.id.orta) ;
         final ImageView sag=findViewById(R.id.fofosag);
         ImageView sol=findViewById(R.id.fofosol);
+        final TextView ad6=findViewById(R.id.ad6);
 
-        Bitmap bread=BitmapFactory.decodeResource(getResources(),R.drawable.ffbread);
-        Bitmap cake=BitmapFactory.decodeResource(getResources(),R.drawable.ffcake);
-        Bitmap cheese=BitmapFactory.decodeResource(getResources(),R.drawable.ffcheese);
-        Bitmap choco=BitmapFactory.decodeResource(getResources(),R.drawable.ffchocolate);
-        Bitmap egg=BitmapFactory.decodeResource(getResources(),R.drawable.ffeg);
-        Bitmap fries=BitmapFactory.decodeResource(getResources(),R.drawable.fffries);
-        Bitmap honey=BitmapFactory.decodeResource(getResources(),R.drawable.ffhoney);
-        Bitmap icecream=BitmapFactory.decodeResource(getResources(),R.drawable.fficecream);
-        Bitmap meatball=BitmapFactory.decodeResource(getResources(),R.drawable.ffmeatball);
-        Bitmap olive=BitmapFactory.decodeResource(getResources(),R.drawable.ffolive);
-        Bitmap pasta=BitmapFactory.decodeResource(getResources(),R.drawable.ffpasta);
-        Bitmap salad=BitmapFactory.decodeResource(getResources(),R.drawable.ffsalad);
-        Bitmap soup=BitmapFactory.decodeResource(getResources(),R.drawable.ffsoup);
-        Bitmap yoghurt=BitmapFactory.decodeResource(getResources(),R.drawable.ffyoghurt);
+        Bitmap bread=BitmapFactory.decodeResource(getResources(),R.drawable.bread);
+        Bitmap cake=BitmapFactory.decodeResource(getResources(),R.drawable.cakee);
+        Bitmap cheese=BitmapFactory.decodeResource(getResources(),R.drawable.cheese);
+        Bitmap choco=BitmapFactory.decodeResource(getResources(),R.drawable.chocolate);
+        Bitmap egg=BitmapFactory.decodeResource(getResources(),R.drawable.eg);
+        Bitmap fries=BitmapFactory.decodeResource(getResources(),R.drawable.fries);
+        Bitmap honey=BitmapFactory.decodeResource(getResources(),R.drawable.honey);
+        Bitmap icecream=BitmapFactory.decodeResource(getResources(),R.drawable.icecreamm);
+        Bitmap meatball=BitmapFactory.decodeResource(getResources(),R.drawable.meatball);
+        Bitmap olive=BitmapFactory.decodeResource(getResources(),R.drawable.olive);
+        Bitmap pasta=BitmapFactory.decodeResource(getResources(),R.drawable.pasta);
+        Bitmap salad=BitmapFactory.decodeResource(getResources(),R.drawable.salad);
+        Bitmap soup=BitmapFactory.decodeResource(getResources(),R.drawable.soup);
+        Bitmap yoghurt=BitmapFactory.decodeResource(getResources(),R.drawable.yoghurt);
 
 
         final ArrayList<Bitmap> foods = new ArrayList<>();
@@ -70,6 +74,7 @@ public class food_food extends AppCompatActivity {
                 }
 
                 orta.setImageBitmap(foods.get(i));
+                ad6.setText(adlar[i]);
             }
             });
 
@@ -81,6 +86,7 @@ public class food_food extends AppCompatActivity {
                 }
                 i--;
                 orta.setImageBitmap(foods.get(i));
+                ad6.setText(adlar[i]);
             }
         });
 

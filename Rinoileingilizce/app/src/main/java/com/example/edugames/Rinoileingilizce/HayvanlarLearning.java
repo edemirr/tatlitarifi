@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,10 +20,11 @@ import static com.example.edugames.Rinoileingilizce.R.raw.kangrooo;
 public class HayvanlarLearning extends AppCompatActivity {
 
     Context context=this;
-    public static SoundPool sp;
-    int i = 0;
+    public static SoundPool sp;    int i = 0;
     public static int[] sounds ;
 
+    private String[] adlar = {"bird", "bee", "cat","chicken", "cow", "dog","donkey", "duck", "elephant","fish", "goat", "horse","kangroo", "lion", "monkey",
+            "rabbit","snake", "turtle", "zebra"};
 
 
     @Override
@@ -32,6 +34,10 @@ public class HayvanlarLearning extends AppCompatActivity {
         final ImageView hayvanorta=findViewById(R.id.hayvanorta);
         ImageView hayvansag=findViewById(R.id.hayvansag);
         ImageView hayvansol=findViewById(R.id.hayvansol);
+        final TextView ad=findViewById(R.id.ad);
+
+
+
 
         sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
         sounds = new int[18];
@@ -51,11 +57,13 @@ public class HayvanlarLearning extends AppCompatActivity {
         sounds[13] = sp.load(context,R.raw.lionn,1);
         sounds[14] = sp.load(context,R.raw.monkeyy,1);
         sounds[15] = sp.load(context,R.raw.rabbitt,1);
+        //sounds[16] = sp.load(context,R.raw.snake,1);
         sounds[16] = sp.load(context,R.raw.turtlee,1);
         sounds[17] = sp.load(context,R.raw.zebraa,1);
 
-        Bitmap bee= BitmapFactory.decodeResource(getResources(),R.drawable.beee);
+
         Bitmap bird=BitmapFactory.decodeResource(getResources(),R.drawable.bird);
+        Bitmap bee=BitmapFactory.decodeResource(getResources(),R.drawable.beee);
         Bitmap cat=BitmapFactory.decodeResource(getResources(),R.drawable.catt);
         Bitmap chicken=BitmapFactory.decodeResource(getResources(),R.drawable.chicken);
         Bitmap cow=BitmapFactory.decodeResource(getResources(),R.drawable.cow);
@@ -70,6 +78,7 @@ public class HayvanlarLearning extends AppCompatActivity {
         Bitmap lion=BitmapFactory.decodeResource(getResources(),R.drawable.lion);
         Bitmap monkey=BitmapFactory.decodeResource(getResources(),R.drawable.monkeyy);
         Bitmap rabbit=BitmapFactory.decodeResource(getResources(),R.drawable.rabbitt);
+        //Bitmap snake= BitmapFactory.decodeResource(getResources(),R.drawable.snake);
         Bitmap turtle=BitmapFactory.decodeResource(getResources(),R.drawable.turtle);
         Bitmap zebra=BitmapFactory.decodeResource(getResources(),R.drawable.zebraa);
 
@@ -91,6 +100,7 @@ public class HayvanlarLearning extends AppCompatActivity {
         hayvanlar.add(lion);
         hayvanlar.add(monkey);
         hayvanlar.add(rabbit);
+        //hayvanlar.add(snake);
         hayvanlar.add(turtle);
         hayvanlar.add(zebra);
 
@@ -106,6 +116,8 @@ public class HayvanlarLearning extends AppCompatActivity {
                 }
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
                 sp.play(sounds[i],100,100,1,0,1);
+                ad.setText(adlar[i]);
+
             }
         });
 
@@ -121,6 +133,7 @@ public class HayvanlarLearning extends AppCompatActivity {
 
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
                 sp.play(sounds[i],100,100,1,0,1);
+                ad.setText(adlar[i]);
              }
         });
 

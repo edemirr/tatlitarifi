@@ -7,14 +7,34 @@
         tools:context=".RenklerLearning"
         android:background="@drawable/colorsarka">
 
+        <TextView
+            android:id="@+id/ad2"
+            android:layout_width="374dp"
+            android:layout_height="124dp"
+            android:layout_marginBottom="96dp"
+            android:gravity="center_vertical|center"
+            android:text="black"
+            android:textColor="@android:color/background_dark"
+            android:textSize="65sp"
+            app:fontFamily="@font/coming_soon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/renkorta"
         android:layout_width="400dp"
         android:layout_height="400dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
         android:onClick="sesver"
-        app:srcCompat="@drawable/blcak"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blcak" />
 
     <ImageView
         android:id="@+id/renksag"

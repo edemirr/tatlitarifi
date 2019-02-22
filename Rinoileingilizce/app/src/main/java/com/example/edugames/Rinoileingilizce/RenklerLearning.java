@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -29,12 +30,13 @@ public class RenklerLearning extends AppCompatActivity {
         sp.release();
         sp=null;
     }
-
+    private String[] adlar = {"black", "blue","brown", "green","orange", "pink", "purple","red", "white", "yellow"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_renkler_learning);
+
 
         sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
         sounds = new int[10];
@@ -54,7 +56,7 @@ public class RenklerLearning extends AppCompatActivity {
         final ImageView renkorta=findViewById(R.id.renkorta) ;
         final ImageView renksag=findViewById(R.id.renksag);
         ImageView renksol=findViewById(R.id.renksol);
-
+        final TextView ad2=findViewById(R.id.ad2);
 
         Bitmap red=BitmapFactory.decodeResource(getResources(),R.drawable.red);
         Bitmap orange=BitmapFactory.decodeResource(getResources(),R.drawable.orange);
@@ -70,15 +72,17 @@ public class RenklerLearning extends AppCompatActivity {
         final ArrayList<Bitmap> renkler = new ArrayList<>();
 
         renkler.add(black);
-        renkler.add(brown);
-        renkler.add(red);
-        renkler.add(orange);
-        renkler.add(yellow);
-        renkler.add(green);
         renkler.add(blue);
-        renkler.add(purple);
-        renkler.add(pink);
-        renkler.add(white);
+        renkler.add(brown);
+        renkler.add(green);renkler.add(orange); renkler.add(pink);
+
+        renkler.add(purple);renkler.add(red);
+
+
+
+
+
+        renkler.add(white);renkler.add(yellow);
 
 
 
@@ -94,7 +98,7 @@ public class RenklerLearning extends AppCompatActivity {
 
                     renkorta.setImageBitmap(renkler.get(i));
                     sp.play(sounds[i],100,100,1,0,1);
-
+                    ad2.setText(adlar[i]);
 
             }
         });
@@ -111,6 +115,7 @@ public class RenklerLearning extends AppCompatActivity {
                     i--;
 
                     renkorta.setImageBitmap(renkler.get(i));
+                ad2.setText(adlar[i]);
 
                 sp.play(sounds[i],100,100,1,0,1);
 
