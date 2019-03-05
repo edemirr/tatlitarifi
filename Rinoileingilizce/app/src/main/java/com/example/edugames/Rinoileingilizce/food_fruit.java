@@ -3,6 +3,8 @@ package com.example.edugames.Rinoileingilizce;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,8 @@ public class food_fruit extends AppCompatActivity {
 
     int i = 0;
     Context context=this;
+    public static SoundPool sp;
+    public static int[] sounds ;
     private String[] adlar = {"apple", "apricot","banana", "cherry",
             "grape","melon", "orange","peach", "pear","strawberry","watermelon",};
 
@@ -28,6 +32,20 @@ public class food_fruit extends AppCompatActivity {
         ImageView sagmeyve = findViewById(R.id.sagmeyve);
         ImageView solmeyve = findViewById(R.id.solmeyve);
         final TextView ad5=findViewById(R.id.ad5);
+
+        sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
+        sounds = new int[111];
+        sounds[0] = sp.load(context,R.raw.birdd,1);
+        sounds[1] = sp.load(context,R.raw.beee,1);
+        sounds[2] = sp.load(context,R.raw.catt,1);
+        sounds[3] = sp.load(context,R.raw.chickenn,1);
+        sounds[4] = sp.load(context,R.raw.coww,1);
+        sounds[5] = sp.load(context,R.raw.dogg,1);
+        sounds[6] = sp.load(context,R.raw.donkeyy,1);
+        sounds[7] = sp.load(context,R.raw.duckk,1);
+        sounds[8] = sp.load(context,R.raw.elephantt,1);
+        sounds[9] = sp.load(context,R.raw.fishh,1);
+        sounds[10] = sp.load(context,R.raw.goatt,1);
 
         Bitmap apple=BitmapFactory.decodeResource(getResources(),R.drawable.elma);
         Bitmap apricot=BitmapFactory.decodeResource(getResources(),R.drawable.kayisi);
@@ -54,6 +72,7 @@ public class food_fruit extends AppCompatActivity {
         meyveler.add(strawbery);
         meyveler.add(watermelon);
 
+
         sagmeyve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +84,7 @@ public class food_fruit extends AppCompatActivity {
 
                 ortameyve.setImageBitmap(meyveler.get(i));
                 ad5.setText(adlar[i]);
+                sp.play(sounds[i],100,100,1,0,1);
             }
         });
 
@@ -78,8 +98,11 @@ public class food_fruit extends AppCompatActivity {
 
                 ortameyve.setImageBitmap(meyveler.get(i));
                 ad5.setText(adlar[i]);
+                sp.play(sounds[i],100,100,1,0,1);
             }
         });
+
+        sp.play(sounds[0],100,100,1,0,1);
 
     }
 }

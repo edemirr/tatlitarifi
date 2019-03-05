@@ -41,15 +41,17 @@ public class RenklerLearning extends AppCompatActivity {
         sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
         sounds = new int[10];
         sounds[0] = sp.load(context,R.raw.black,1);
-        sounds[1] = sp.load(context,R.raw.brown,1);
-        sounds[2] = sp.load(context,R.raw.red,1);
-        sounds[3] = sp.load(context,R.raw.orange,1);
-        sounds[4] = sp.load(context,R.raw.yellow,1);
-        sounds[5] = sp.load(context,R.raw.green,1);
-        sounds[6] = sp.load(context,R.raw.blue,1);
-        sounds[7] = sp.load(context,R.raw.purple,1);
-        sounds[8] = sp.load(context,R.raw.pink,1);
-        sounds[9] = sp.load(context,R.raw.white,1);
+        sounds[2] = sp.load(context,R.raw.brown,1);
+        sounds[7] = sp.load(context,R.raw.red,1);
+        sounds[4] = sp.load(context,R.raw.orange,1);
+        sounds[9] = sp.load(context,R.raw.yellow,1);
+        sounds[3] = sp.load(context,R.raw.green,1);
+        sounds[1] = sp.load(context,R.raw.blue,1);
+        sounds[6] = sp.load(context,R.raw.purple,1);
+        sounds[5] = sp.load(context,R.raw.pink,1);
+        sounds[8] = sp.load(context,R.raw.white,1);
+
+        sp.play(sounds[0],100,100,1,0,1);
 
 
 
@@ -74,15 +76,13 @@ public class RenklerLearning extends AppCompatActivity {
         renkler.add(black);
         renkler.add(blue);
         renkler.add(brown);
-        renkler.add(green);renkler.add(orange); renkler.add(pink);
-
-        renkler.add(purple);renkler.add(red);
-
-
-
-
-
-        renkler.add(white);renkler.add(yellow);
+        renkler.add(green);
+        renkler.add(orange);
+        renkler.add(pink);
+        renkler.add(purple);
+        renkler.add(red);
+        renkler.add(white);
+        renkler.add(yellow);
 
 
 
@@ -123,7 +123,7 @@ public class RenklerLearning extends AppCompatActivity {
             }
         });
 
-        sp.play(sounds[0],100,100,1,0,1);
+
 
 
 

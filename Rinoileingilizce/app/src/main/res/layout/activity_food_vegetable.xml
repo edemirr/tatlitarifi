@@ -5,7 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".food_vegetable"
-    android:background="@drawable/fruitsarka">
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/baslikRino5"
+        android:layout_width="157dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="71dp"
+        android:src="@drawable/ustllooggo"
+        app:layout_constraintBottom_toTopOf="@+id/HarflerMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/ad4"
@@ -45,14 +59,15 @@
 
     <ImageView
         android:id="@+id/foveorta"
-        android:layout_width="346dp"
-        android:layout_height="313dp"
+        android:layout_width="274dp"
+        android:layout_height="257dp"
         android:layout_marginStart="6dp"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/carrot" />

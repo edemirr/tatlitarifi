@@ -5,61 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HarflerLearningActivity"
-    android:background="@drawable/lettersarka">
+    android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/harfholder"
-        android:layout_width="182dp"
-        android:layout_height="221dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="50dp"
-        android:onClick="sesver"
-        app:layout_constraintBottom_toTopOf="@+id/holder3"
-        app:layout_constraintEnd_toStartOf="@+id/holder2"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toEndOf="@+id/holder1"
-        app:layout_constraintTop_toBottomOf="@+id/holder1"
-        app:layout_constraintVertical_bias="0.452"
-        app:srcCompat="@drawable/a" />
-
-    <ImageView
-        android:id="@+id/holder3"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/harfholder"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/airplane" />
-
-    <ImageView
-        android:id="@+id/holder2"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/apple" />
-
-    <ImageView
-        android:id="@+id/holder1"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="116dp"
+        android:id="@+id/baslikRino6"
+        android:layout_width="157dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="71dp"
+        android:src="@drawable/ustllooggo"
+        app:layout_constraintBottom_toTopOf="@+id/HarflerMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/astronot" />
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/solaok"

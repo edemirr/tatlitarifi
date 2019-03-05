@@ -40,7 +40,7 @@ public class HayvanlarLearning extends AppCompatActivity {
 
 
         sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
-        sounds = new int[18];
+        sounds = new int[19];
         sounds[0] = sp.load(context,R.raw.birdd,1);
         sounds[1] = sp.load(context,R.raw.beee,1);
         sounds[2] = sp.load(context,R.raw.catt,1);
@@ -57,9 +57,9 @@ public class HayvanlarLearning extends AppCompatActivity {
         sounds[13] = sp.load(context,R.raw.lionn,1);
         sounds[14] = sp.load(context,R.raw.monkeyy,1);
         sounds[15] = sp.load(context,R.raw.rabbitt,1);
-        //sounds[16] = sp.load(context,R.raw.snake,1);
-        sounds[16] = sp.load(context,R.raw.turtlee,1);
-        sounds[17] = sp.load(context,R.raw.zebraa,1);
+        sounds[16] = sp.load(context,R.raw.lionn,1);
+        sounds[17] = sp.load(context,R.raw.turtlee,1);
+        sounds[18] = sp.load(context,R.raw.zebraa,1);
 
 
         Bitmap bird=BitmapFactory.decodeResource(getResources(),R.drawable.bird);
@@ -78,7 +78,7 @@ public class HayvanlarLearning extends AppCompatActivity {
         Bitmap lion=BitmapFactory.decodeResource(getResources(),R.drawable.lion);
         Bitmap monkey=BitmapFactory.decodeResource(getResources(),R.drawable.monkeyy);
         Bitmap rabbit=BitmapFactory.decodeResource(getResources(),R.drawable.rabbitt);
-        //Bitmap snake= BitmapFactory.decodeResource(getResources(),R.drawable.snake);
+        Bitmap snake= BitmapFactory.decodeResource(getResources(),R.drawable.snake);
         Bitmap turtle=BitmapFactory.decodeResource(getResources(),R.drawable.turtle);
         Bitmap zebra=BitmapFactory.decodeResource(getResources(),R.drawable.zebraa);
 
@@ -100,7 +100,7 @@ public class HayvanlarLearning extends AppCompatActivity {
         hayvanlar.add(lion);
         hayvanlar.add(monkey);
         hayvanlar.add(rabbit);
-        //hayvanlar.add(snake);
+        hayvanlar.add(snake);
         hayvanlar.add(turtle);
         hayvanlar.add(zebra);
 
@@ -111,7 +111,7 @@ public class HayvanlarLearning extends AppCompatActivity {
             public void onClick(View v) {
 
                 i++;
-                if (i == 18){
+                if (i == 19){
                     i =0;
                 }
                 hayvanorta.setImageBitmap(hayvanlar.get(i));
@@ -127,7 +127,7 @@ public class HayvanlarLearning extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(i==0){
-                    i=18;
+                    i=19;
                 }
                 i--;
 

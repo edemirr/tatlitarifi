@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SayilarActivity"
-    android:background="@drawable/numbersarka">
+    android:background="@drawable/background2">
 
     <ImageView
         android:id="@+id/test9"

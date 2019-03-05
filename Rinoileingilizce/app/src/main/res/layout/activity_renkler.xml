@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RenklerActivity"
-    android:background="@drawable/colorsarka">
+    android:background="@drawable/background2">
 
     <ImageView
         android:id="@+id/test8"
