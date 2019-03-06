@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/baslikRino9"
-        android:layout_width="157dp"
-        android:layout_height="96dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="71dp"
-        android:src="@drawable/ustllooggo"
+        android:src="@drawable/bodyust"
         app:layout_constraintBottom_toTopOf="@+id/HarflerMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
