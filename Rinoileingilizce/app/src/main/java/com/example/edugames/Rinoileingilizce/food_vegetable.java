@@ -16,9 +16,7 @@ import java.util.ArrayList;
 public class food_vegetable extends AppCompatActivity {
 
 
-    Context context=this;
-    public static SoundPool sp;
-    public static int[] sounds ;
+
 
     int i = 0;
     private String[] adlar = {"carrot", "corn","cucumber", "mushroom",
@@ -33,17 +31,7 @@ public class food_vegetable extends AppCompatActivity {
         ImageView sol=findViewById(R.id.fovesol);
         final TextView ad4=findViewById(R.id.ad4);
 
-        sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
-        sounds = new int[9];
-        sounds[0] = sp.load(context,R.raw.birdd,1);
-        sounds[1] = sp.load(context,R.raw.beee,1);
-        sounds[2] = sp.load(context,R.raw.catt,1);
-        sounds[3] = sp.load(context,R.raw.chickenn,1);
-        sounds[4] = sp.load(context,R.raw.coww,1);
-        sounds[5] = sp.load(context,R.raw.dogg,1);
-        sounds[6] = sp.load(context,R.raw.donkeyy,1);
-        sounds[7] = sp.load(context,R.raw.duckk,1);
-        sounds[8] = sp.load(context,R.raw.elephantt,1);
+
 
 
 
@@ -84,7 +72,7 @@ public class food_vegetable extends AppCompatActivity {
 
                 orta.setImageBitmap(veges.get(i));
                 ad4.setText(adlar[i]);
-                sp.play(sounds[i],100,100,1,0,1);
+
             }
         });
 
@@ -97,7 +85,7 @@ public class food_vegetable extends AppCompatActivity {
                 i--;
                 orta.setImageBitmap(veges.get(i));
                 ad4.setText(adlar[i]);
-                sp.play(sounds[i],100,100,1,0,1);
+
             }
         });
 

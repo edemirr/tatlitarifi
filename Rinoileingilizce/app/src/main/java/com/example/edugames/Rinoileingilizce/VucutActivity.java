@@ -14,7 +14,7 @@ public class VucutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vucut);
         learn = findViewById(R.id.learn10);
-        test=  findViewById(R.id.test10);
+
     }
     public void vucutlearn(View view){
 
@@ -22,10 +22,5 @@ public class VucutActivity extends AppCompatActivity {
         startActivity(ıntent);
 
     }
-    public void vucuttest(View view){
 
-        Intent ıntent = new Intent(this,HarflerLearningActivity.class);
-        startActivity(ıntent);
-
-    }
 }

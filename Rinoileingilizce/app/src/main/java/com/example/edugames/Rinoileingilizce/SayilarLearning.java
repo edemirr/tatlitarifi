@@ -14,9 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class SayilarLearning extends AppCompatActivity {
-    Context context=this;
-    public static SoundPool sp;
-    public static int[] sounds ;
+
 
     int i = 0;
 
@@ -34,18 +32,7 @@ public class SayilarLearning extends AppCompatActivity {
         final ImageView solaokk = findViewById(R.id.solaok);
         final TextView ad3=findViewById(R.id.ad3);
 
-        sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
-        sounds = new int[10];
-        sounds[0] = sp.load(context,R.raw.one,1);
-        sounds[1] = sp.load(context,R.raw.two,1);
-        sounds[2] = sp.load(context,R.raw.three,1);
-        sounds[3] = sp.load(context,R.raw.four,1);
-        sounds[4] = sp.load(context,R.raw.five,1);
-        sounds[5] = sp.load(context,R.raw.six,1);
-        sounds[6] = sp.load(context,R.raw.seven,1);
-        sounds[7] = sp.load(context,R.raw.eight,1);
-        sounds[8] = sp.load(context,R.raw.nine,1);
-        sounds[9] = sp.load(context,R.raw.zero,1);
+
 
 
 
@@ -74,7 +61,7 @@ public class SayilarLearning extends AppCompatActivity {
         sayilarpics.add(eight);
         sayilarpics.add(nine);
         sayilarpics.add(zero);
-        sp.play(sounds[0],100,100,1,0,1);
+
 
         sagaokk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +73,7 @@ public class SayilarLearning extends AppCompatActivity {
                 }
 
                 ortaresim.setImageBitmap(sayilarpics.get(i));
-                sp.play(sounds[i],100,100,1,0,1);
+
                 ad3.setText(adlar[i]);
 
 
@@ -101,7 +88,7 @@ public class SayilarLearning extends AppCompatActivity {
                 }
                 i--;
                 ortaresim.setImageBitmap(sayilarpics.get(i));
-                sp.play(sounds[i],100,100,1,0,1);
+
                 ad3.setText(adlar[i]);
 
             }
@@ -109,8 +96,6 @@ public class SayilarLearning extends AppCompatActivity {
 
 
     }
-
-    public void sesver(View view){}
 
 
 }

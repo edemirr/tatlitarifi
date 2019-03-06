@@ -13,8 +13,8 @@ public class RenklerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_renkler);
 
-        ImageView learn = findViewById(R.id.learn8);
-        ImageView test=findViewById(R.id.test8);
+        ImageView learn = findViewById(R.id.colorlearn);
+
 
 
 

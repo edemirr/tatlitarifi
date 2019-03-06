@@ -14,7 +14,7 @@ public class HayvanlarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hayvanlar);
 
         ImageView hayvanlearn=findViewById(R.id.hayvanlarlearn);
-        ImageView hayvanlartest=findViewById(R.id.hayvanlartest);
+
 
 
     }

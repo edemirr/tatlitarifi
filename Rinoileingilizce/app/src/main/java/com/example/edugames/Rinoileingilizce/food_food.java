@@ -16,9 +16,7 @@ import java.util.ArrayList;
 
 public class food_food extends AppCompatActivity {
 
-    Context context=this;
-    public static SoundPool sp;
-    public static int[] sounds ;
+
 
     int i = 0;
     private String[] adlar = {"bread", "cake","cheese", "chocolate",
@@ -33,22 +31,6 @@ public class food_food extends AppCompatActivity {
         final ImageView sag=findViewById(R.id.fofosag);
         ImageView sol=findViewById(R.id.fofosol);
         final TextView ad6=findViewById(R.id.ad6);
-        sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
-        sounds = new int[14];
-        sounds[0] = sp.load(context,R.raw.birdd,1);
-        sounds[1] = sp.load(context,R.raw.beee,1);
-        sounds[2] = sp.load(context,R.raw.catt,1);
-        sounds[3] = sp.load(context,R.raw.chickenn,1);
-        sounds[4] = sp.load(context,R.raw.coww,1);
-        sounds[5] = sp.load(context,R.raw.dogg,1);
-        sounds[6] = sp.load(context,R.raw.donkeyy,1);
-        sounds[7] = sp.load(context,R.raw.duckk,1);
-        sounds[8] = sp.load(context,R.raw.elephantt,1);
-        sounds[9] = sp.load(context,R.raw.fishh,1);
-        sounds[10] = sp.load(context,R.raw.goatt,1);
-        sounds[11] = sp.load(context,R.raw.horsee,1);
-        sounds[12] = sp.load(context,R.raw.kangrooo,1);
-        sounds[13] = sp.load(context,R.raw.lionn,1);
 
         Bitmap bread=BitmapFactory.decodeResource(getResources(),R.drawable.bread);
         Bitmap cake=BitmapFactory.decodeResource(getResources(),R.drawable.cakee);
@@ -97,7 +79,7 @@ public class food_food extends AppCompatActivity {
 
                 orta.setImageBitmap(foods.get(i));
                 ad6.setText(adlar[i]);
-                sp.play(sounds[i],100,100,1,0,1);
+
             }
             });
 
@@ -110,14 +92,14 @@ public class food_food extends AppCompatActivity {
                 i--;
                 orta.setImageBitmap(foods.get(i));
                 ad6.setText(adlar[i]);
-                sp.play(sounds[i],100,100,1,0,1);
+
             }
         });
 
 
 
 
-        sp.play(sounds[0],100,100,1,0,1);
+
 
 
 

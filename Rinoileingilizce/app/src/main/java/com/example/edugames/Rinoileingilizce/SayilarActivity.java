@@ -16,7 +16,7 @@ public class SayilarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sayilar);
 
         ImageView learn=findViewById(R.id.learn9);
-        ImageView test = findViewById(R.id.test9);
+
     }
 
         public void learnNumbers(View view){

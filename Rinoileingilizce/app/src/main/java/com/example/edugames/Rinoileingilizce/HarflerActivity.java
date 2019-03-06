@@ -15,16 +15,11 @@ public class HarflerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_harfler);
         learn = findViewById(R.id.learn);
-        test=  findViewById(R.id.test);
+
 
     }
 
-    public void harflertest(View view){
 
-        Intent ıntent = new Intent(this,HarflerTestActivity.class);
-        startActivity(ıntent);
-
-    }
 
     public void harflerlearn(View view){
 
