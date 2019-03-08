@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.edugames.Rinoileingilizce">
+    package="com.edugames.Rinoileingilizce">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
@@ -22,20 +22,34 @@
         </activity>
         <activity android:name=".HarflerActivity" />
 
-        <activity android:name=".HarflerLearningActivity" />
-        <activity android:name=".SayilarActivity" />
-        <activity android:name=".FoodDrinkActivity" />
-        <activity android:name=".RenklerActivity" />
-        <activity android:name=".HayvanlarActivity" />
-        <activity android:name=".VucutActivity" />
-        <activity android:name=".SayilarLearning" />
-        <activity android:name=".RenklerLearning" />
-        <activity android:name=".HayvanlarLearning" />
-        <activity android:name=".food_food" />
-        <activity android:name=".food_drink" />
-        <activity android:name=".food_vegetable" />
-        <activity android:name=".food_fruit" />
-        <activity android:name=".VucutLearning"></activity>
+        <activity android:name=".HarflerLearningActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SayilarActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FoodDrinkActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RenklerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HayvanlarActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VucutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SayilarLearning"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RenklerLearning"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HayvanlarLearning"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".food_food"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".food_drink"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".food_vegetable"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".food_fruit"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VucutLearning"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
