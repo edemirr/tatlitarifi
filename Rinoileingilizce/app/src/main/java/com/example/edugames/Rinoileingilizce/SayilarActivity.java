@@ -17,6 +17,14 @@ public class SayilarActivity extends AppCompatActivity {
 
         ImageView learn=findViewById(R.id.learn9);
 
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 
         public void learnNumbers(View view){

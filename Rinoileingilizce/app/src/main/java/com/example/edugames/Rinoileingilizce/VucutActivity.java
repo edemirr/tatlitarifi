@@ -15,6 +15,15 @@ public class VucutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vucut);
         learn = findViewById(R.id.learn10);
 
+
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
     public void vucutlearn(View view){
 

@@ -38,6 +38,14 @@ public class RenklerLearning extends AppCompatActivity {
         setContentView(R.layout.activity_renkler_learning);
 
 
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
         sounds = new int[10];
         sounds[0] = sp.load(context,R.raw.black,1);

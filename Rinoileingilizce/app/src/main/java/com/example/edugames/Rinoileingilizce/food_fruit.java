@@ -88,6 +88,14 @@ public class food_fruit extends AppCompatActivity {
         });
 
 
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
 
     }
 }

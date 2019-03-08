@@ -15,7 +15,13 @@ public class RenklerActivity extends AppCompatActivity {
 
         ImageView learn = findViewById(R.id.colorlearn);
 
-
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
     }

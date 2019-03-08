@@ -37,7 +37,13 @@ public class HayvanlarLearning extends AppCompatActivity {
         final TextView ad=findViewById(R.id.ad);
 
 
-
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         sp=new SoundPool(1,AudioManager.STREAM_MUSIC,0);
         sounds = new int[19];

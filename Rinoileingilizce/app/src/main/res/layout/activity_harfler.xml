@@ -9,6 +9,20 @@
     tools:layout_editor_absoluteY="25dp">
 
     <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/back"
+        app:layout_constraintEnd_toStartOf="@+id/baslikRino2"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
         android:id="@+id/learn"
         android:layout_width="280dp"
         android:layout_height="284dp"

@@ -33,7 +33,13 @@ public class SayilarLearning extends AppCompatActivity {
         final TextView ad3=findViewById(R.id.ad3);
 
 
-
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
 

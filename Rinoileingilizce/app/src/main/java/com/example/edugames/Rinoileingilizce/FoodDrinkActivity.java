@@ -19,9 +19,17 @@ public class FoodDrinkActivity extends AppCompatActivity {
         ImageView fruit = findViewById(R.id.fdfr);
 
 
-
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
+
+
     public void intentfood(View view){
 
         Intent ıntent = new Intent(this,food_food.class);

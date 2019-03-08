@@ -28,7 +28,13 @@ public class VucutLearning extends AppCompatActivity {
         ImageView sol=findViewById(R.id.vucutsol);
         final TextView ad=findViewById(R.id.ad8);
 
-
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         Bitmap arm=BitmapFactory.decodeResource(getResources(),R.drawable.arm);
         Bitmap ear=BitmapFactory.decodeResource(getResources(),R.drawable.ear);

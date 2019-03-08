@@ -35,7 +35,13 @@ ImageView orta;
         final ImageView nextok = findViewById(R.id.sagaok);
         orta=findViewById(R.id.harforta);
 
-
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
 
